@@ -1,0 +1,33 @@
+<%--=========================================================================== 
+Header (top area). 
+===========================================================================--%>
+
+<%@ page import="ua.nure.andreiko.airline.db.Role" %>
+<%@ include file="/WEB-INF/jspf/directive/page.jspf" %>
+<%@ include file="/WEB-INF/jspf/directive/taglib.jspf" %>
+
+<div class="header-panel">
+    <nav class="navbar navbar-dark bg-primary">
+        <c:if test="${not empty user}">
+
+            <img src="${pageContext.request.contextPath}/images/airline_logo.png"
+                 class="navbar-brand mr-0 mr-md-2"
+                 alt="Andreiko Airlines" width="3%" height="3%">
+
+
+            <div class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+
+                <a class="btn btn-warning btn-sm" href="controller?command=logout">
+                    Logout
+                </a>
+
+            </div>
+        </c:if>
+
+        <c:if test="${empty user and title ne 'Login'}">
+            <div class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+                <a class="btn btn-warning btn-sm" href="login.jsp">Login</a>
+            </div>
+        </c:if>
+    </nav>
+</div>

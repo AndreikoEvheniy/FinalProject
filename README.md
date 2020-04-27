@@ -19,4 +19,3 @@ The administrator manages (should be the ability to add, delete, edit):
 Also, the administrator considers the applications of the dispatcher and closes
 them with one of the statuses (completed, deflected).
 ~~~
-# FinalProject
